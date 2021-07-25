@@ -4,136 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#add8">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="587dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-102dp"
+        tools:layout_editor_absoluteY="16dp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="601dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="141dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="307dp"
-        android:layout_height="57dp"
-        android:text="Please fill in the given Form to create an Account"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.062"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TableLayout
-        android:layout_width="409dp"
-        android:layout_height="388dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="2dp"
-        android:background="#500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:padding="16dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Full Name"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#fff" />
-
-        <EditText
-            android:padding="16dp"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="TYPE HERE"
-            android:textColorHint="#5000000000"/>
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="587dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="601dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="141dp" />
 
         <TextView
-            android:padding="16dp"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Email Adress"
-            android:textSize="25sp"
+            android:id="@+id/beginning"
+            android:layout_width="307dp"
+            android:layout_height="57dp"
+            android:text="Please fill in the given Form to create an Account"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#fff" />
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:padding="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="TYPE HERE"
-            android:textColorHint="#5000000000"/>
-        />
-
-        <TableRow
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Firstrow"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beginning"
+            android:layout_marginTop="50dp"
+            android:hint="First Name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Secondrow"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        <TextView
-            android:padding="16dp"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Gender and Preferred Pronoun"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#fff" />
+            android:layout_below="@id/Firstrow"
+            android:layout_marginTop="50dp"
+            android:hint="Last name" />
 
-        <EditText
-            android:padding="16dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Thirdrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Secondrow"
+            android:layout_marginTop="50dp"
+            android:hint="Email Address" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Fourthrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Thirdrow"
+            android:layout_marginTop="50dp"
+            android:hint="Gender" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Fifthrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Fourthrow"
+            android:layout_marginTop="50dp"
+            android:hint="Preferred Pronouns" />
+
+        <Button
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="TYPE HERE"
-            android:textColorHint="#5000000000"/>
-        />
+            android:text="SUBMIT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/Fifthrow"/>
 
-    </TableLayout>
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/Firstrow"
+            tools:srcCompat="@tools:sample/avatars" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
